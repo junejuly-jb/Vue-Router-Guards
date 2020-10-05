@@ -7,18 +7,32 @@ import Login from './components/Login.vue'
 import Register from './components/Register.vue'
 import Userdashboard from './components/User/Userdashboard.vue'
 import Admindashboard from './components/Admin/Admindashboard.vue'
+import Default from './components/Default.vue'
 
 Vue.use(VueRouter)
 
 const router = new VueRouter({
     routes: [
         {
+            path: '/',
+            component: Default,
+            meta: {
+                forVisitors: true
+            }
+        },
+        {
             path: '/login',
             component: Login,
+            meta: {
+                forVisitors: true
+            }
         },
         {
             path: '/register',
-            component: Register
+            component: Register,
+            meta: {
+                forVisitors: true
+            }
         },
         {
             path: '/userdashboard',
@@ -60,6 +74,21 @@ router.beforeEach((to, from, next) => {
             else {
                 next('/admindashboard')
             }
+        }
+    }
+    else if (to.meta.forVisitors) { 
+        const token = window.localStorage.getItem('token')
+        if (token) {
+            const usertype = window.localStorage.getItem('usertype')
+            if (usertype == 'admin') {
+                next('/admindashboard')
+            }
+            else { 
+                next('/userdashboard')
+            }
+        }
+        else { 
+            next()
         }
     }
     else { 

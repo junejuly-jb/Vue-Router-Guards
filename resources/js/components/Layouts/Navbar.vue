@@ -21,20 +21,3 @@
         </nav>
     </div>
 </template>
-<script>
-// export default {
-//     data(){
-//         return{
-//             token: ''
-//         }
-//     },
-//     methods:{
-//         logout(){
-//             console.log('clicked')
-//             localStorage.removeItem('token')
-//             localStorage.removeItem('usertype')
-//             this.$router.push('/login')
-//         }
-//     }
-// }
-</script>

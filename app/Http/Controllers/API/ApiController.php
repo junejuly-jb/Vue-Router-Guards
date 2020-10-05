@@ -66,4 +66,12 @@ class ApiController extends Controller
 
         $note->save();
     }
+
+    public function profile(){
+        $user = auth()->user();
+
+        return response()->json([
+            'data' => $user
+        ]);
+    }
 }

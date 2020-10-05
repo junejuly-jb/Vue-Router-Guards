@@ -18,10 +18,13 @@ body{
     font-size: 28px !important;
 }
 .bg-dark-mode{
-    background-color: #121212;
+    background-color: #121212 !important;
 }
 
 .drop-hover:hover{
     background: transparent !important;
     color: white;
+}
+.point-me{
+    cursor: pointer;
 }

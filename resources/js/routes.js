@@ -8,6 +8,7 @@ import Register from './components/Register.vue'
 import Userdashboard from './components/User/Userdashboard.vue'
 import Admindashboard from './components/Admin/Admindashboard.vue'
 import Default from './components/Default.vue'
+import Items from './components/Admin/Items.vue'
 
 Vue.use(VueRouter)
 
@@ -44,6 +45,13 @@ const router = new VueRouter({
         {
             path: '/admindashboard',
             component: Admindashboard,
+            meta: {
+                requiresAuth: true, adminAuth: true, userAuth: false
+            }
+        },
+        {
+            path: '/admindashboard/items',
+            component: Items,
             meta: {
                 requiresAuth: true, adminAuth: true, userAuth: false
             }

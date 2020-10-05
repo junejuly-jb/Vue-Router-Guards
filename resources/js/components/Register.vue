@@ -1,5 +1,7 @@
 <template>
-    <div class="d-flex justify-content-center align-items-center text-white" style="height: 90vh">
+    <div>
+        <navbar></navbar>
+        <div class="d-flex justify-content-center align-items-center text-white" style="height: 80vh">
             <div class="bg-gray-accent py-4 card-login">
                 <div class="container">
                     <div class="mb-4">
@@ -42,6 +44,7 @@
                 </div>
             </div>
         </div>
+    </div>
 </template>
 <script>
     export default {

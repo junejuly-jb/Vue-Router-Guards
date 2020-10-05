@@ -1,31 +1,34 @@
 <template>
-    <div class="d-flex justify-content-center align-items-center text-white" style="height: 90vh">
-            <div class="bg-gray-accent py-4 card-login">
-                <div class="container">
-                    <div class="mb-4">
-                        <span class="login-header">
-                            Login
-                        </span>
+    <div>
+        <navbar></navbar>
+        <div class="d-flex justify-content-center align-items-center text-white" style="height: 80vh">
+                <div class="bg-gray-accent py-4 card-login">
+                    <div class="container">
+                        <div class="mb-4">
+                            <span class="login-header">
+                                Login
+                            </span>
+                        </div>
+                        <form @submit.prevent="login">
+                            <div class="form-group">
+                                <label for="">Email</label>
+                                <input v-model="form.email" type="text" class="form-control input-dark">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Password</label>
+                                <input v-model="form.password" type="password" class="form-control input-dark">
+                            </div>
+                            <div class="text-center">
+                                <span class="text-danger">{{error}}</span>
+                            </div>
+                            <div class="text-right pt-5">
+                                <button class="btn btn-primary" type="submit">Login</button>
+                            </div>
+                        </form>
                     </div>
-                    <form @submit.prevent="login">
-                        <div class="form-group">
-                            <label for="">Email</label>
-                            <input v-model="form.email" type="text" class="form-control input-dark">
-                        </div>
-                        <div class="form-group">
-                            <label for="">Password</label>
-                            <input v-model="form.password" type="password" class="form-control input-dark">
-                        </div>
-                        <div class="text-center">
-                            <span class="text-danger">{{error}}</span>
-                        </div>
-                        <div class="text-right pt-5">
-                            <button class="btn btn-primary" type="submit">Login</button>
-                        </div>
-                    </form>
                 </div>
             </div>
-        </div>
+    </div>
 </template>
 <script>
     export default {

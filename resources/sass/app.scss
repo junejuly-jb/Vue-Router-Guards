@@ -1,0 +1,22 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+
+body{
+    background-color: #121212;
+}
+.bg-gray-accent{
+    background-color: #1E1E1E !important;
+}
+.login-header{
+    font-size: 28px !important;
+}
+.bg-dark-mode{
+    background-color: #121212;
+}

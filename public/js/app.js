@@ -21145,11 +21145,48 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
     component: _components_Register_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
   }, {
     path: '/userdashboard',
-    component: _components_User_Userdashboard_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
+    component: _components_User_Userdashboard_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+    meta: {
+      requiresAuth: true,
+      userAuth: true,
+      adminAuth: false
+    }
   }, {
     path: '/admindashboard',
-    component: _components_Admin_Admindashboard_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
+    component: _components_Admin_Admindashboard_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+    meta: {
+      requiresAuth: true,
+      adminAuth: true,
+      userAuth: false
+    }
   }]
+});
+router.beforeEach(function (to, from, next) {
+  if (to.meta.requiresAuth) {
+    var token = window.localStorage.getItem('token');
+
+    if (!token) {
+      next('/login');
+    } else if (to.meta.adminAuth) {
+      var usertype = window.localStorage.getItem('usertype');
+
+      if (usertype == 'admin') {
+        next();
+      } else {
+        next('/userdashboard');
+      }
+    } else if (to.meta.userAuth) {
+      var _usertype = window.localStorage.getItem('usertype');
+
+      if (_usertype == 'user') {
+        next();
+      } else {
+        next('/admindashboard');
+      }
+    }
+  } else {
+    next();
+  }
 });
 /* harmony default export */ __webpack_exports__["default"] = (router);
 

@@ -14,7 +14,7 @@ const router = new VueRouter({
     routes: [
         {
             path: '/login',
-            component: Login
+            component: Login,
         },
         {
             path: '/register',
@@ -22,13 +22,48 @@ const router = new VueRouter({
         },
         {
             path: '/userdashboard',
-            component: Userdashboard
+            component: Userdashboard,
+            meta: {
+                requiresAuth: true, userAuth: true, adminAuth: false
+            }
         },
         {
             path: '/admindashboard',
-            component: Admindashboard
+            component: Admindashboard,
+            meta: {
+                requiresAuth: true, adminAuth: true, userAuth: false
+            }
         }
     ]
 })
 
+router.beforeEach((to, from, next) => {
+    if (to.meta.requiresAuth) {
+        const token = window.localStorage.getItem('token')
+        if (!token) {
+            next('/login')
+        }
+        else if (to.meta.adminAuth) {
+            const usertype = window.localStorage.getItem('usertype')
+            if (usertype == 'admin') {
+                next()
+            }
+            else {
+                next('/userdashboard')
+            }
+        }
+        else if (to.meta.userAuth) { 
+            const usertype = window.localStorage.getItem('usertype')
+            if (usertype == 'user') { 
+                next()
+            }
+            else {
+                next('/admindashboard')
+            }
+        }
+    }
+    else { 
+        next()
+    }
+})
 export default router

@@ -61,9 +61,9 @@
                                 <path d="M16 11h6m-3 -3v6" />
                             </svg>
                         </div>
-                        <div class="text-center pt-3 acct_name text-pop">{{form.name}}</div>
+                        <div class="text-center pt-3 acct_name text-pop">{{details.name}}</div>
                         <div class="text-center pb-2">
-                            <small>( {{form.usertype}} )</small>
+                            <small>( {{details.usertype}} )</small>
                         </div>
                         <div class="account_header">Additional Information</div>
                         <hr>
@@ -77,7 +77,7 @@
                                             <polyline points="3 7 12 13 21 7" />
                                         </svg>
                                     </td>
-                                  <td class="text-secondary"><small>{{form.email}}</small></td>
+                                  <td class="text-secondary">{{details.email}}</td>
                               </tr>
                               <tr>
                                   <td width="50">
@@ -88,7 +88,7 @@
                                         </svg>
                                     </td>
                                   <!-- <td class="text-secondary" v-if="details.address != null"><small>{{details.address}}</small></td> -->
-                                  <td class="text-secondary">asd</td>
+                                  <td class="text-secondary">{{details.address}}</td>
                               </tr>
                               
                               <tr>
@@ -100,7 +100,7 @@
                                             <line x1="12" y1="17" x2="12" y2="17.01" />
                                         </svg>
                                     </td>
-                                  <td class="text-secondary">ad</td>
+                                  <td class="text-secondary">{{details.contact}}</td>
                               </tr>
                           </table>
                         </div>
@@ -146,13 +146,23 @@ export default {
         contact: '',
         address: '',
       }),
-      user: ''
+      details: []
     }
   },
   methods:{
     getUserInfo(){
       const user = JSON.parse(localStorage.getItem('user'))
-      this.form = user;
+      this.details = user;
+      this.form.fill(user)
+    },
+    async updateUser(){
+      await this.$http.put('api/updateUser', this.form)
+      .then((res) => {
+        this.$auth.destroyUserCredentials()
+        this.$auth.setUserCredentials(JSON.stringify(res.data.data))
+        this.getUserInfo()
+      })
+      console.log(this.form)
     }
   },
   created() {

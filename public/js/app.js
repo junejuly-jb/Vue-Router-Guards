@@ -1920,6 +1920,14 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 //
 //
 //
@@ -2067,13 +2075,42 @@ __webpack_require__.r(__webpack_exports__);
         contact: '',
         address: ''
       }),
-      user: ''
+      details: []
     };
   },
   methods: {
     getUserInfo: function getUserInfo() {
       var user = JSON.parse(localStorage.getItem('user'));
-      this.form = user;
+      this.details = user;
+      this.form.fill(user);
+    },
+    updateUser: function updateUser() {
+      var _this = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return _this.$http.put('api/updateUser', _this.form).then(function (res) {
+                  _this.$auth.destroyUserCredentials();
+
+                  _this.$auth.setUserCredentials(JSON.stringify(res.data.data));
+
+                  _this.getUserInfo();
+                });
+
+              case 2:
+                console.log(_this.form);
+
+              case 3:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }))();
     }
   },
   created: function created() {
@@ -2383,17 +2420,17 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
                     _this.$auth.setToken(res.data.token['accessToken'], res.data.usertype);
 
-                    _this.$auth.setUserToken(JSON.stringify(res.data.user));
+                    _this.$auth.setUserCredentials(JSON.stringify(res.data.user));
 
                     _this.$router.push('/admindashboard');
 
                     _this.$Progress.finish();
                   } else {
-                    _this.$Progress.start(); // localStorage.setItem('token', res.data.token['accessToken'])
-                    // localStorage.setItem('usertype', res.data.usertype)
-
+                    _this.$Progress.start();
 
                     _this.$auth.setToken(res.data.token['accessToken'], res.data.usertype);
+
+                    _this.$auth.setUserCredentials(JSON.stringify(res.data.user));
 
                     _this.$router.push('/userdashboard');
 
@@ -5792,12 +5829,12 @@ var render = function() {
                     _c(
                       "div",
                       { staticClass: "text-center pt-3 acct_name text-pop" },
-                      [_vm._v(_vm._s(_vm.form.name))]
+                      [_vm._v(_vm._s(_vm.details.name))]
                     ),
                     _vm._v(" "),
                     _c("div", { staticClass: "text-center pb-2" }, [
                       _c("small", [
-                        _vm._v("( " + _vm._s(_vm.form.usertype) + " )")
+                        _vm._v("( " + _vm._s(_vm.details.usertype) + " )")
                       ])
                     ]),
                     _vm._v(" "),
@@ -5855,7 +5892,7 @@ var render = function() {
                           ]),
                           _vm._v(" "),
                           _c("td", { staticClass: "text-secondary" }, [
-                            _c("small", [_vm._v(_vm._s(_vm.form.email))])
+                            _vm._v(_vm._s(_vm.details.email))
                           ])
                         ]),
                         _vm._v(" "),
@@ -5902,7 +5939,7 @@ var render = function() {
                           ]),
                           _vm._v(" "),
                           _c("td", { staticClass: "text-secondary" }, [
-                            _vm._v("asd")
+                            _vm._v(_vm._s(_vm.details.address))
                           ])
                         ]),
                         _vm._v(" "),
@@ -5966,7 +6003,7 @@ var render = function() {
                           ]),
                           _vm._v(" "),
                           _c("td", { staticClass: "text-secondary" }, [
-                            _vm._v("ad")
+                            _vm._v(_vm._s(_vm.details.contact))
                           ])
                         ])
                       ])
@@ -24003,8 +24040,11 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = (function (Vue) {
   Vue.auth = {
-    setUserToken: function setUserToken(user) {
+    setUserCredentials: function setUserCredentials(user) {
       localStorage.setItem('user', user);
+    },
+    destroyUserCredentials: function destroyUserCredentials() {
+      localStorage.removeItem('user');
     },
     setToken: function setToken(token, usertype) {
       localStorage.setItem('token', token);

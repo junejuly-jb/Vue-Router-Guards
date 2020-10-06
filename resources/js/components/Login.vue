@@ -61,15 +61,14 @@
                         if(res.data.usertype == 'admin'){
                             this.$Progress.start()
                             this.$auth.setToken(res.data.token['accessToken'], res.data.usertype)
-                            this.$auth.setUserToken(JSON.stringify(res.data.user))
+                            this.$auth.setUserCredentials(JSON.stringify(res.data.user))
                             this.$router.push('/admindashboard')
                             this.$Progress.finish()
                         }
                         else{
                             this.$Progress.start()
-                            // localStorage.setItem('token', res.data.token['accessToken'])
-                            // localStorage.setItem('usertype', res.data.usertype)
                             this.$auth.setToken(res.data.token['accessToken'], res.data.usertype)
+                            this.$auth.setUserCredentials(JSON.stringify(res.data.user))
                             this.$router.push('/userdashboard')
                             this.$Progress.finish()
                         }

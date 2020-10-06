@@ -11,6 +11,7 @@ Route::group(['middleware' => ['auth:api']], function(){
     Route::post('/addNote', 'App\Http\Controllers\API\ApiController@addNote');
     Route::get('/getAllUsers', 'App\Http\Controllers\API\ApiController@getAllUsers');
     Route::get('/profile', 'App\Http\Controllers\API\ApiController@profile');
+    Route::put('/updateUser', 'App\Http\Controllers\API\ApiController@updateUser');
 });
 
 Route::post('/login', 'App\Http\Controllers\API\ApiController@login');

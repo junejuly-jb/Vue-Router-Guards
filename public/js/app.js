@@ -1911,6 +1911,55 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Admin/Admin_List.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Admin/Admin_List.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mounted: function mounted() {
+    var plugin = document.createElement("script");
+    plugin.setAttribute("src", "./js/sidebar.js");
+    plugin.async = true;
+    document.head.appendChild(plugin);
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Admin/Admin_Profile.vue?vue&type=script&lang=js&":
 /*!******************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Admin/Admin_Profile.vue?vue&type=script&lang=js& ***!
@@ -2280,6 +2329,58 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -5640,6 +5741,85 @@ AlertSuccess_component.options.__file = "AlertSuccess.vue"
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Admin/Admin_List.vue?vue&type=template&id=84b1fc0e&":
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Admin/Admin_List.vue?vue&type=template&id=84b1fc0e& ***!
+  \*******************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "d-flex", attrs: { id: "wrapper" } },
+    [
+      _c("sidebar"),
+      _vm._v(" "),
+      _c(
+        "div",
+        { attrs: { id: "page-content-wrapper" } },
+        [
+          _c("nav-auth"),
+          _vm._v(" "),
+          _c("div", { staticClass: "container text-white" }, [
+            _vm._v("\n                LIST OF ADMINS\n                "),
+            _c("hr", { staticClass: "bg-gray-accent" }),
+            _vm._v(" "),
+            _c("button", { staticClass: "btn btn-primary d-flex" }, [
+              _c(
+                "svg",
+                {
+                  staticClass: "icon icon-tabler icon-tabler-user-plus",
+                  attrs: {
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: "20",
+                    height: "20",
+                    viewBox: "0 0 24 24",
+                    "stroke-width": "1.5",
+                    stroke: "#FFFFFF",
+                    fill: "none",
+                    "stroke-linecap": "round",
+                    "stroke-linejoin": "round"
+                  }
+                },
+                [
+                  _c("path", {
+                    attrs: { stroke: "none", d: "M0 0h24v24H0z", fill: "none" }
+                  }),
+                  _vm._v(" "),
+                  _c("circle", { attrs: { cx: "9", cy: "7", r: "4" } }),
+                  _vm._v(" "),
+                  _c("path", {
+                    attrs: { d: "M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" }
+                  }),
+                  _vm._v(" "),
+                  _c("path", { attrs: { d: "M16 11h6m-3 -3v6" } })
+                ]
+              ),
+              _vm._v("   Add Admin \n                ")
+            ])
+          ])
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Admin/Admin_Profile.vue?vue&type=template&id=17aaa71e&":
 /*!**********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Admin/Admin_Profile.vue?vue&type=template&id=17aaa71e& ***!
@@ -6645,7 +6825,7 @@ var render = function() {
       attrs: { id: "sidebar-wrapper" }
     },
     [
-      _c("div", { staticClass: "sidebar-heading text-center text-white" }, [
+      _c("div", { staticClass: "sidebar-heading text-white" }, [
         _vm._v("Dev Ket")
       ]),
       _vm._v(" "),
@@ -6660,7 +6840,41 @@ var render = function() {
                 "list-group-item list-group-item-action bg-gray-accent text-white",
               attrs: { to: "/admindashboard" }
             },
-            [_vm._v("Dashboard")]
+            [
+              _c(
+                "svg",
+                {
+                  staticClass: "icon icon-tabler icon-tabler-gauge mr-2",
+                  attrs: {
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: "24",
+                    height: "24",
+                    viewBox: "0 0 24 24",
+                    "stroke-width": "1.5",
+                    stroke: "#2196F3",
+                    fill: "none",
+                    "stroke-linecap": "round",
+                    "stroke-linejoin": "round"
+                  }
+                },
+                [
+                  _c("path", {
+                    attrs: { stroke: "none", d: "M0 0h24v24H0z", fill: "none" }
+                  }),
+                  _vm._v(" "),
+                  _c("circle", { attrs: { cx: "12", cy: "12", r: "9" } }),
+                  _vm._v(" "),
+                  _c("circle", { attrs: { cx: "12", cy: "12", r: "1" } }),
+                  _vm._v(" "),
+                  _c("line", {
+                    attrs: { x1: "13.41", y1: "10.59", x2: "16", y2: "8" }
+                  }),
+                  _vm._v(" "),
+                  _c("path", { attrs: { d: "M7 12a5 5 0 0 1 5 -5" } })
+                ]
+              ),
+              _vm._v("\n          Dashboard\n        ")
+            ]
           ),
           _vm._v(" "),
           _c(
@@ -6670,7 +6884,37 @@ var render = function() {
                 "list-group-item list-group-item-action bg-gray-accent text-white",
               attrs: { to: "/admin_profile" }
             },
-            [_vm._v("My Profile")]
+            [
+              _c(
+                "svg",
+                {
+                  staticClass: "icon icon-tabler icon-tabler-user mr-2",
+                  attrs: {
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: "24",
+                    height: "24",
+                    viewBox: "0 0 24 24",
+                    "stroke-width": "1.5",
+                    stroke: "#2196F3",
+                    fill: "none",
+                    "stroke-linecap": "round",
+                    "stroke-linejoin": "round"
+                  }
+                },
+                [
+                  _c("path", {
+                    attrs: { stroke: "none", d: "M0 0h24v24H0z", fill: "none" }
+                  }),
+                  _vm._v(" "),
+                  _c("circle", { attrs: { cx: "12", cy: "7", r: "4" } }),
+                  _vm._v(" "),
+                  _c("path", {
+                    attrs: { d: "M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" }
+                  })
+                ]
+              ),
+              _vm._v("\n          My Profile\n        ")
+            ]
           ),
           _vm._v(" "),
           _c(
@@ -6680,10 +6924,292 @@ var render = function() {
                 "list-group-item list-group-item-action bg-gray-accent text-white",
               attrs: { to: "/admin_transaction" }
             },
-            [_vm._v("Transactions")]
+            [
+              _c(
+                "svg",
+                {
+                  staticClass: "icon icon-tabler icon-tabler-refresh mr-2",
+                  attrs: {
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: "24",
+                    height: "24",
+                    viewBox: "0 0 24 24",
+                    "stroke-width": "1.5",
+                    stroke: "#2196F3",
+                    fill: "none",
+                    "stroke-linecap": "round",
+                    "stroke-linejoin": "round"
+                  }
+                },
+                [
+                  _c("path", {
+                    attrs: { stroke: "none", d: "M0 0h24v24H0z", fill: "none" }
+                  }),
+                  _vm._v(" "),
+                  _c("path", {
+                    attrs: { d: "M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4" }
+                  }),
+                  _vm._v(" "),
+                  _c("path", {
+                    attrs: { d: "M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4" }
+                  })
+                ]
+              ),
+              _vm._v("\n          Transactions\n        ")
+            ]
           ),
           _vm._v(" "),
-          _vm._m(0)
+          _c(
+            "div",
+            {
+              staticClass:
+                "wrapper center-block list-group-item list-group-item-action bg-gray-accent"
+            },
+            [
+              _c(
+                "div",
+                {
+                  staticClass: "panel-group",
+                  attrs: {
+                    id: "accordion",
+                    role: "tablist",
+                    "aria-multiselectable": "true"
+                  }
+                },
+                [
+                  _c("div", { staticClass: "panel panel-default" }, [
+                    _vm._m(0),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "panel-collapse collapse in mt-4",
+                        attrs: {
+                          id: "collapseOne",
+                          role: "tabpanel",
+                          "aria-labelledby": "headingOne"
+                        }
+                      },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "panel-body bg-dark-mode py-2 px-2 rounded"
+                          },
+                          [
+                            _c(
+                              "router-link",
+                              {
+                                staticClass:
+                                  "list-group-item list-group-item-action bg-gray-accent text-white",
+                                attrs: { to: "/admin_user_list" }
+                              },
+                              [
+                                _c(
+                                  "svg",
+                                  {
+                                    staticClass:
+                                      "icon icon-tabler icon-tabler-users mr-2",
+                                    attrs: {
+                                      xmlns: "http://www.w3.org/2000/svg",
+                                      width: "24",
+                                      height: "24",
+                                      viewBox: "0 0 24 24",
+                                      "stroke-width": "1.5",
+                                      stroke: "#2196F3",
+                                      fill: "none",
+                                      "stroke-linecap": "round",
+                                      "stroke-linejoin": "round"
+                                    }
+                                  },
+                                  [
+                                    _c("path", {
+                                      attrs: {
+                                        stroke: "none",
+                                        d: "M0 0h24v24H0z",
+                                        fill: "none"
+                                      }
+                                    }),
+                                    _vm._v(" "),
+                                    _c("circle", {
+                                      attrs: { cx: "9", cy: "7", r: "4" }
+                                    }),
+                                    _vm._v(" "),
+                                    _c("path", {
+                                      attrs: {
+                                        d:
+                                          "M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"
+                                      }
+                                    }),
+                                    _vm._v(" "),
+                                    _c("path", {
+                                      attrs: { d: "M16 3.13a4 4 0 0 1 0 7.75" }
+                                    }),
+                                    _vm._v(" "),
+                                    _c("path", {
+                                      attrs: {
+                                        d: "M21 21v-2a4 4 0 0 0 -3 -3.85"
+                                      }
+                                    })
+                                  ]
+                                ),
+                                _vm._v(
+                                  "\n                    Users\n                  "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "router-link",
+                              {
+                                staticClass:
+                                  "list-group-item list-group-item-action bg-gray-accent text-white",
+                                attrs: { to: "/admin_store_list" }
+                              },
+                              [
+                                _c(
+                                  "svg",
+                                  {
+                                    staticClass:
+                                      "icon icon-tabler icon-tabler-building-store mr-2",
+                                    attrs: {
+                                      xmlns: "http://www.w3.org/2000/svg",
+                                      width: "24",
+                                      height: "24",
+                                      viewBox: "0 0 24 24",
+                                      "stroke-width": "1.5",
+                                      stroke: "#2196F3",
+                                      fill: "none",
+                                      "stroke-linecap": "round",
+                                      "stroke-linejoin": "round"
+                                    }
+                                  },
+                                  [
+                                    _c("path", {
+                                      attrs: {
+                                        stroke: "none",
+                                        d: "M0 0h24v24H0z",
+                                        fill: "none"
+                                      }
+                                    }),
+                                    _vm._v(" "),
+                                    _c("line", {
+                                      attrs: {
+                                        x1: "3",
+                                        y1: "21",
+                                        x2: "21",
+                                        y2: "21"
+                                      }
+                                    }),
+                                    _vm._v(" "),
+                                    _c("path", {
+                                      attrs: {
+                                        d:
+                                          "M3 7v1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1h-18l2 -4h14l2 4"
+                                      }
+                                    }),
+                                    _vm._v(" "),
+                                    _c("line", {
+                                      attrs: {
+                                        x1: "5",
+                                        y1: "21",
+                                        x2: "5",
+                                        y2: "10.85"
+                                      }
+                                    }),
+                                    _vm._v(" "),
+                                    _c("line", {
+                                      attrs: {
+                                        x1: "19",
+                                        y1: "21",
+                                        x2: "19",
+                                        y2: "10.85"
+                                      }
+                                    }),
+                                    _vm._v(" "),
+                                    _c("path", {
+                                      attrs: {
+                                        d:
+                                          "M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4"
+                                      }
+                                    })
+                                  ]
+                                ),
+                                _vm._v(
+                                  "\n                    Stores\n                  "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "router-link",
+                              {
+                                staticClass:
+                                  "list-group-item list-group-item-action bg-gray-accent text-white",
+                                attrs: { to: "/admin_list" }
+                              },
+                              [
+                                _c(
+                                  "svg",
+                                  {
+                                    staticClass:
+                                      "icon icon-tabler icon-tabler-lock mr-2",
+                                    attrs: {
+                                      xmlns: "http://www.w3.org/2000/svg",
+                                      width: "24",
+                                      height: "24",
+                                      viewBox: "0 0 24 24",
+                                      "stroke-width": "1.5",
+                                      stroke: "#2196F3",
+                                      fill: "none",
+                                      "stroke-linecap": "round",
+                                      "stroke-linejoin": "round"
+                                    }
+                                  },
+                                  [
+                                    _c("path", {
+                                      attrs: {
+                                        stroke: "none",
+                                        d: "M0 0h24v24H0z",
+                                        fill: "none"
+                                      }
+                                    }),
+                                    _vm._v(" "),
+                                    _c("rect", {
+                                      attrs: {
+                                        x: "5",
+                                        y: "11",
+                                        width: "14",
+                                        height: "10",
+                                        rx: "2"
+                                      }
+                                    }),
+                                    _vm._v(" "),
+                                    _c("circle", {
+                                      attrs: { cx: "12", cy: "16", r: "1" }
+                                    }),
+                                    _vm._v(" "),
+                                    _c("path", {
+                                      attrs: { d: "M8 11v-4a4 4 0 0 1 8 0v4" }
+                                    })
+                                  ]
+                                ),
+                                _vm._v(
+                                  "\n                    Admins\n                  "
+                                )
+                              ]
+                            )
+                          ],
+                          1
+                        )
+                      ]
+                    )
+                  ])
+                ]
+              )
+            ]
+          )
         ],
         1
       )
@@ -6698,76 +7224,27 @@ var staticRenderFns = [
     return _c(
       "div",
       {
-        staticClass:
-          "wrapper center-block list-group-item list-group-item-action bg-gray-accent"
+        staticClass: "panel-heading",
+        attrs: { role: "tab", id: "headingOne" }
       },
       [
-        _c(
-          "div",
-          {
-            staticClass: "panel-group",
-            attrs: {
-              id: "accordion",
-              role: "tablist",
-              "aria-multiselectable": "true"
-            }
-          },
-          [
-            _c("div", { staticClass: "panel panel-default" }, [
-              _c(
-                "div",
-                {
-                  staticClass: "panel-heading",
-                  attrs: { role: "tab", id: "headingOne" }
-                },
-                [
-                  _c("h4", { staticClass: "panel-title" }, [
-                    _c(
-                      "a",
-                      {
-                        staticClass: "text-white",
-                        attrs: {
-                          role: "button",
-                          "data-toggle": "collapse",
-                          "data-parent": "#accordion",
-                          href: "#collapseOne",
-                          "aria-expanded": "true",
-                          "aria-controls": "collapseOne"
-                        }
-                      },
-                      [_vm._v("\n                Management\n                ")]
-                    )
-                  ])
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "panel-collapse collapse in mt-4",
-                  attrs: {
-                    id: "collapseOne",
-                    role: "tabpanel",
-                    "aria-labelledby": "headingOne"
-                  }
-                },
-                [
-                  _c(
-                    "div",
-                    {
-                      staticClass: "panel-body bg-dark-mode py-2 px-2 rounded"
-                    },
-                    [
-                      _vm._v(
-                        "\n                    raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.\n                "
-                      )
-                    ]
-                  )
-                ]
-              )
-            ])
-          ]
-        )
+        _c("h4", { staticClass: "panel-title" }, [
+          _c(
+            "a",
+            {
+              staticClass: "text-white",
+              attrs: {
+                role: "button",
+                "data-toggle": "collapse",
+                "data-parent": "#accordion",
+                href: "#collapseOne",
+                "aria-expanded": "true",
+                "aria-controls": "collapseOne"
+              }
+            },
+            [_vm._v("\n                Management\n                ")]
+          )
+        ])
       ]
     )
   }
@@ -24081,6 +24558,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/Admin/Admin_List.vue":
+/*!******************************************************!*\
+  !*** ./resources/js/components/Admin/Admin_List.vue ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Admin_List_vue_vue_type_template_id_84b1fc0e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Admin_List.vue?vue&type=template&id=84b1fc0e& */ "./resources/js/components/Admin/Admin_List.vue?vue&type=template&id=84b1fc0e&");
+/* harmony import */ var _Admin_List_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Admin_List.vue?vue&type=script&lang=js& */ "./resources/js/components/Admin/Admin_List.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Admin_List_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Admin_List_vue_vue_type_template_id_84b1fc0e___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Admin_List_vue_vue_type_template_id_84b1fc0e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Admin/Admin_List.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Admin/Admin_List.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/components/Admin/Admin_List.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Admin_List_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./Admin_List.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Admin/Admin_List.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Admin_List_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Admin/Admin_List.vue?vue&type=template&id=84b1fc0e&":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/components/Admin/Admin_List.vue?vue&type=template&id=84b1fc0e& ***!
+  \*************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Admin_List_vue_vue_type_template_id_84b1fc0e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./Admin_List.vue?vue&type=template&id=84b1fc0e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Admin/Admin_List.vue?vue&type=template&id=84b1fc0e&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Admin_List_vue_vue_type_template_id_84b1fc0e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Admin_List_vue_vue_type_template_id_84b1fc0e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/components/Admin/Admin_Profile.vue":
 /*!*********************************************************!*\
   !*** ./resources/js/components/Admin/Admin_Profile.vue ***!
@@ -24826,8 +25372,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Default_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/Default.vue */ "./resources/js/components/Default.vue");
 /* harmony import */ var _components_Admin_Admin_Profile_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/Admin/Admin_Profile.vue */ "./resources/js/components/Admin/Admin_Profile.vue");
 /* harmony import */ var _components_Admin_Admin_Transaction_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/Admin/Admin_Transaction.vue */ "./resources/js/components/Admin/Admin_Transaction.vue");
+/* harmony import */ var _components_Admin_Admin_List_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/Admin/Admin_List.vue */ "./resources/js/components/Admin/Admin_List.vue");
 
  //Import Components
+
 
 
 
@@ -24867,6 +25415,14 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   }, {
     path: '/admindashboard',
     component: _components_Admin_Admindashboard_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+    meta: {
+      requiresAuth: true,
+      adminAuth: true,
+      userAuth: false
+    }
+  }, {
+    path: '/admin_list',
+    component: _components_Admin_Admin_List_vue__WEBPACK_IMPORTED_MODULE_9__["default"],
     meta: {
       requiresAuth: true,
       adminAuth: true,

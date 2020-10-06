@@ -10,6 +10,7 @@ import Admindashboard from './components/Admin/Admindashboard.vue'
 import Default from './components/Default.vue'
 import Admin_Profile from './components/Admin/Admin_Profile.vue'
 import Admin_Transaction from './components/Admin/Admin_Transaction.vue'
+import Admin_List from './components/Admin/Admin_List.vue'
 
 Vue.use(VueRouter)
 
@@ -46,6 +47,13 @@ const router = new VueRouter({
         {
             path: '/admindashboard',
             component: Admindashboard,
+            meta: {
+                requiresAuth: true, adminAuth: true, userAuth: false
+            }
+        },
+        {
+            path: '/admin_list',
+            component: Admin_List,
             meta: {
                 requiresAuth: true, adminAuth: true, userAuth: false
             }

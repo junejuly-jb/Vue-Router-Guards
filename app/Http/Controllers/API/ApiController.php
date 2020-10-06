@@ -27,7 +27,8 @@ class ApiController extends Controller
             return response()->json([
                 'message' => 'User logged in!',
                 'token' => $token,
-                'usertype' => $usertype
+                'usertype' => $usertype,
+                'user' => auth()->user()
             ]);
         }
         else{
@@ -63,7 +64,6 @@ class ApiController extends Controller
             'title' => $request->title,
             'description' => $request->description
         ]);
-
         $note->save();
     }
 

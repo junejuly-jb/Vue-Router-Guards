@@ -12,11 +12,11 @@
                         <form @submit.prevent="login">
                             <div class="form-group">
                                 <label for="">Email</label>
-                                <input v-model="form.email" type="text" class="form-control input-dark">
+                                <input v-model="form.email" type="text" class="form-control input-dark" placeholder="Enter email address">
                             </div>
                             <div class="form-group">
                                 <label for="">Password</label>
-                                <input v-model="form.password" type="password" class="form-control input-dark">
+                                <input v-model="form.password" type="password" class="form-control input-dark" placeholder="Enter password">
                             </div>
                             <div class="text-center">
                                 <span class="text-danger">{{error}}</span>
@@ -43,24 +43,35 @@
         },
         methods: {
             async login(){
+                    this.$Progress.start()
                 if(this.form.email == '' || this.form.password == ''){
+                    this.$Progress.start()
                     this.error = '❌ input fields are empty'
+                    this.$Progress.fail()
+
                 }
                 else{
                     await this.form.post('api/login')
                     .then((res) => {
                         if(res.data.message = 'fail'){
+                            this.$Progress.start()
                             this.error = 'No records found!'
+                            this.$Progress.fail()
                         }
                         if(res.data.usertype == 'admin'){
-                            localStorage.setItem('token', res.data.token['accessToken'])
-                            localStorage.setItem('usertype', res.data.usertype)
+                            this.$Progress.start()
+                            this.$auth.setToken(res.data.token['accessToken'], res.data.usertype)
+                            this.$auth.setUserToken(JSON.stringify(res.data.user))
                             this.$router.push('/admindashboard')
+                            this.$Progress.finish()
                         }
                         else{
-                            localStorage.setItem('token', res.data.token['accessToken'])
-                            localStorage.setItem('usertype', res.data.usertype)
+                            this.$Progress.start()
+                            // localStorage.setItem('token', res.data.token['accessToken'])
+                            // localStorage.setItem('usertype', res.data.usertype)
+                            this.$auth.setToken(res.data.token['accessToken'], res.data.usertype)
                             this.$router.push('/userdashboard')
+                            this.$Progress.finish()
                         }
                     })
                 }

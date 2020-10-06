@@ -74,4 +74,23 @@ class ApiController extends Controller
             'data' => $user
         ]);
     }
+
+    public function updateUser(Request $request){
+        $user = auth()->user();
+
+        $this->validate($request, [
+            'contact' => 'required',
+            'address' => 'required'
+        ]);
+
+        $user->name = $request->name;
+        $user->contact = $request->contact;
+        $user->address = $request->address;
+        $user->save();
+
+        return response()->json([
+            'data' => $user,
+            'message' => 'User updated'
+        ]);
+    }
 }

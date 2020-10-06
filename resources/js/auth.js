@@ -2,8 +2,11 @@ import vueProgressbar from "vue-progressbar"
 
 export default function (Vue) { 
     Vue.auth = {
-        setUserToken(user) {
+        setUserCredentials(user) {
             localStorage.setItem('user', user)
+        },
+        destroyUserCredentials() { 
+            localStorage.removeItem('user')
         },
         setToken(token, usertype,) { 
             localStorage.setItem('token', token)

@@ -20,8 +20,8 @@
     <body>
         <div id="app">
             <router-view></router-view>
+            <vue-progress-bar></vue-progress-bar>
         </div>
     <script src="{{asset('js/app.js')}}"></script>
-    <script src="{{asset('js/sidebar.js')}}"></script>
     </body>
 </html>

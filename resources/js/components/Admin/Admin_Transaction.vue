@@ -12,7 +12,7 @@
             <nav-auth></nav-auth>
 
             <div class="container-fluid">
-                    Sample Content
+                    Transaction Page
             </div>
         </div>
 
